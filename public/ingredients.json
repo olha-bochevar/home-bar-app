@@ -1,0 +1,27 @@
+[
+    { "id": 1, "name": "Whisk(e)y", "isAlcoholic": true },
+    { "id": 2, "name": "Gin", "isAlcoholic": true },
+    { "id": 3, "name": "R(h)um", "isAlcoholic": true },
+    { "id": 4, "name": "Tequila & Mezcal", "isAlcoholic": true },
+    { "id": 5, "name": "Vodka & Similar", "isAlcoholic": true },
+    { "id": 6, "name": "Brandy", "isAlcoholic": true },
+    { "id": 7, "name": "Beer & Cider", "isAlcoholic": true },
+    { "id": 8, "name": "Wine", "isAlcoholic": true },
+    { "id": 9, "name": "Common Liquers", "isAlcoholic": true },
+    { "id": 10, "name": "Vermouth", "isAlcoholic": true },
+    { "id": 11, "name": "Port & Sherry", "isAlcoholic": true },
+    { "id": 12, "name": "Aperetifs", "isAlcoholic": true },
+    { "id": 13, "name": "Common Amaro", "isAlcoholic": true },
+    { "id": 14, "name": "Common Bitters", "isAlcoholic": true },
+    { "id": 15, "name": "Citrus", "isAlcoholic": false },
+  { "id": 16, "name": "Juices", "isAlcoholic": false },
+  { "id": 17, "name": "Fruit & Veg", "isAlcoholic": false },
+  { "id": 18, "name": "Syrups", "isAlcoholic": false },
+  { "id": 19, "name": "Jams and Preserves", "isAlcoholic": false },
+  { "id": 20, "name": "Herbs & Spices", "isAlcoholic": false },
+  { "id": 21, "name": "Sodas", "isAlcoholic": false },
+  { "id": 22, "name": "Common Pantry Items", "isAlcoholic": false },
+  { "id": 23, "name": "Common Grocery Items", "isAlcoholic": false },
+  { "id": 24, "name": "Homemade Syrups", "isAlcoholic": false }
+  ]
+  

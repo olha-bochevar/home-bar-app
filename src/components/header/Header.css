@@ -1,0 +1,9 @@
+header {
+	background-color: #fff;
+	z-index: 999;
+}
+
+header nav ul {
+	display: flex;
+	gap: 1rem;
+}
