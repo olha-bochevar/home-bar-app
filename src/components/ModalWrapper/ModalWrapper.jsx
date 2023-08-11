@@ -28,8 +28,8 @@ export const ModalWrapper = ({ open, children }) => {
 	if (!open) return null;
 	return (
 		<>
-			<div style={OVERLAY_STYLE}>
-				<div style={MODAL_STYLES}>{children}</div>
+			<div style={MODAL_STYLES}>
+				<div style={OVERLAY_STYLE}>{children}</div>
 			</div>
 		</>
 	);
