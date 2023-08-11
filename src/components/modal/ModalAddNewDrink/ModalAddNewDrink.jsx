@@ -176,7 +176,10 @@ export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 				</div>
 
 				<div className="col-12 d-flex justify-content-center">
-					<button type="submit" className="btn btn-primary py-2 w-75 mt-2">
+					<button
+						type="submit"
+						className="btn btn-primary py-2 px-4 w-auto mt-2"
+					>
 						Add drink
 					</button>
 				</div>
