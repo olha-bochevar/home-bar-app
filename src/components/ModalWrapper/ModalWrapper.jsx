@@ -9,7 +9,6 @@ const MODAL_STYLES = {
 	overflow: 'auto',
 	position: 'relative',
 	padding: '2rem',
-	boxSizing: 'border-box',
 };
 const OVERLAY_STYLE = {
 	position: 'fixed',
@@ -22,6 +21,7 @@ const OVERLAY_STYLE = {
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
+	boxSizing: 'border-box',
 };
 export const ModalWrapper = ({ open, children }) => {
 	if (!open) return null;
