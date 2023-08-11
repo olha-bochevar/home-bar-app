@@ -44,17 +44,15 @@ function ModalWrapper({ children }) {
 				onRequestClose={closeModal}
 				style={modalStyles}
 			>
-				<div className="scroll-component">
-					<div className="scroll-content">
-						<div className="d-flex justify-content-end">
-							<button onClick={closeModal} className="btn fs-4 p-0">
-								<i className="bi bi-x-lg"></i>
-							</button>
-						</div>
+				<div>
+					<div className="d-flex justify-content-end">
+						<button onClick={closeModal} className="btn fs-4 p-0">
+							<i className="bi bi-x-lg"></i>
+						</button>
 					</div>
-				</div>
 
-				{children}
+					{children}
+				</div>
 			</Modal>
 		</div>
 	);
