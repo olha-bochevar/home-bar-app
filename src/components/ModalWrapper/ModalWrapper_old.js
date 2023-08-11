@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 
-import './ModalWrapper.css';
-
 // Стилі для модального вікна
 
 const modalStyles = {
@@ -20,6 +18,8 @@ const modalStyles = {
 		maxWidth: '600px',
 		width: '100%',
 		zIndex: '9999',
+		height: '100vh',
+		overflow: 'auto',
 	},
 };
 
@@ -44,15 +44,12 @@ function ModalWrapper({ children }) {
 				onRequestClose={closeModal}
 				style={modalStyles}
 			>
-				<div>
-					<div className="d-flex justify-content-end">
-						<button onClick={closeModal} className="btn fs-4 p-0">
-							<i className="bi bi-x-lg"></i>
-						</button>
-					</div>
-
-					{children}
+				<div className="d-flex justify-content-end">
+					<button onClick={closeModal} className="btn fs-4 p-0">
+						<i className="bi bi-x-lg"></i>
+					</button>
 				</div>
+				<div>{children}</div>
 			</Modal>
 		</div>
 	);

@@ -4,8 +4,8 @@ import { doc, deleteDoc } from 'firebase/firestore';
 import { Drink } from 'components/Drink/Drink';
 import './MyBeverages.css';
 import { useDrinks } from 'hooks/DrinksContext';
-import { ModalAddNewDrink } from 'components/Modal/ModalAddNewDrink/ModalAddNewDrink';
-
+//import { ModalAddNewDrink } from 'components/Modal/ModalAddNewDrink/ModalAddNewDrink';
+import { AddNewDrink } from './../AddNewDrink/AddNewDrink';
 export function MyBeverages() {
 	const { drinks } = useDrinks();
 	const [typeOfBeverage, setTypeOfBeverage] = useState('All');
@@ -45,7 +45,7 @@ export function MyBeverages() {
 			<h2>My beverages</h2>
 			<h4>Now you have {drinks.length} beverages in your bar.</h4>
 			<div>
-				<ModalAddNewDrink />
+				<AddNewDrink />
 			</div>
 			<div
 				className="btn-group"

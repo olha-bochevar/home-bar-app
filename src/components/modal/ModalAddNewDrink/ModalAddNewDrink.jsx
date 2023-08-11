@@ -3,11 +3,11 @@ import { v4 as uuid } from 'uuid';
 import { doc, setDoc } from 'firebase/firestore';
 import { Drink } from 'hooks/Drink';
 
-import ModalWrapper from 'components/ModalWrapper/ModalWrapper';
+import { ModalWrapper } from 'components/ModalWrapper/ModalWrapper';
 import { useEffect, useRef, useState } from 'react';
 import { useIngredients } from 'hooks/useIngredients';
 
-export function ModalAddNewDrink() {
+export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 	const { ingredients } = useIngredients();
 	const [addNewDrink, setAddNewDrink] = useState({
 		id: '',
@@ -79,24 +79,21 @@ export function ModalAddNewDrink() {
 				type: '',
 				isAlcoholic: 'Alcoholic',
 			});
+			setIsModalOpen(false);
 		} catch (error) {
 			console.error('Error adding document: ', error);
 		}
 	};
 
 	return (
-		<ModalWrapper>
+		<ModalWrapper open={isModalOpen}>
+			<div className="d-flex justify-content-end">
+				<button onClick={() => setIsModalOpen(false)} className="btn fs-4 p-0">
+					<i className="bi bi-x-lg"></i>
+				</button>
+			</div>
 			<form className="row g-3 fs-5 p-2" onSubmit={addDrinkToBar}>
-				<div className="col-md-6">
-					<label
-						htmlFor="inputImage"
-						className="d-block text-center form-label"
-					>
-						<i className="bi bi-image" style={{ fontSize: '7rem' }}></i>
-					</label>
-				</div>
-
-				<div className="col-md-6">
+				<div className="col-md-12">
 					<div className="mb-2">
 						<label htmlFor="inputName" className="form-label">
 							Name
@@ -178,8 +175,8 @@ export function ModalAddNewDrink() {
 					</ul>
 				</div>
 
-				<div className="col-12">
-					<button type="submit" className="btn btn-primary py-2">
+				<div className="col-12 d-flex justify-content-center">
+					<button type="submit" className="btn btn-primary py-2 w-75 mt-2">
 						Add drink
 					</button>
 				</div>

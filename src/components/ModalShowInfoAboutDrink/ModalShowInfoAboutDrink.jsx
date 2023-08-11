@@ -1,4 +1,4 @@
-import ModalWrapper from 'components/ModalWrapper/ModalWrapper';
+import { ModalWrapper } from 'components/ModalWrapper/ModalWrapper';
 
 export function ModalShowInfoAboutDrink({ isOpen, onClose }) {
 	if (!isOpen) {
