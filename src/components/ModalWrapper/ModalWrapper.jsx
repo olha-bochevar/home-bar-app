@@ -1,3 +1,4 @@
+import './ModalWrapper.css';
 const MODAL_STYLES = {
 	background: 'white',
 	outline: 'none',
@@ -5,9 +6,10 @@ const MODAL_STYLES = {
 	maxWidth: 'calc(100vw - 2rem)',
 	maxHeight: 'calc(100vh - 2rem)',
 	boxShadow: '0 0 34px 0 rgba(0, 0, 0, 0.24)',
-	overflowY: 'auto',
+	overflow: 'auto',
 	position: 'relative',
 	padding: '2rem',
+	boxSizing: 'border-box',
 };
 const OVERLAY_STYLE = {
 	position: 'fixed',
