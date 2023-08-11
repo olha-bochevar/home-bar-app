@@ -18,26 +18,27 @@ export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 		isAlcoholic: true,
 	});
 	const { name, volume, abv, type, isAlcoholic } = addNewDrink;
-	const filteredIngredients = ingredients.filter((item) =>
-		isAlcoholic ? item.isAlcoholic : !item.isAlcoholic
-	);
 
-	const [shownIngredients, setShownIngredients] = useState(ingredients);
+	const [shownIngredients, setShownIngredients] = useState([]);
 
 	useEffect(() => {
-		if (filteredIngredients.length > 0) {
+		if (ingredients.length > 0) {
+			const filteredIngredients = ingredients.filter(
+				(item) => item.isAlcoholic
+			);
 			setShownIngredients(filteredIngredients);
 		}
+	}, []);
+
+	useEffect(() => {
+		const filteredIngredients = ingredients.filter((item) =>
+			isAlcoholic ? item.isAlcoholic : !item.isAlcoholic
+		);
+		setShownIngredients(filteredIngredients);
 	}, [isAlcoholic]);
 
 	const inputAbvRef = useRef();
 
-	/* useEffect(() => {
-		if (!isAlcoholic) {
-			inputAbvRef.current.disabled = true;
-		} else inputAbvRef.current.disabled = false;
-	}, [isAlcoholic]);
- */
 	const handleInputName = ({ target: { value } }) => {
 		setAddNewDrink({ ...addNewDrink, name: value });
 	};
@@ -47,9 +48,10 @@ export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 	const handleInputAbv = ({ target: { value } }) => {
 		setAddNewDrink({ ...addNewDrink, abv: value });
 	};
-	const handleInputType = ({ target: { value } }) => {
-		console.log(value);
-		setAddNewDrink({ ...addNewDrink, type: value });
+
+	const handleLabelClick = (e) => {
+		console.log(e.target.htmlFor);
+		setAddNewDrink({ ...addNewDrink, type: e.target.htmlFor });
 		console.log(type);
 	};
 	const handleInputIsAlco = ({ target: { value } }) => {
@@ -160,14 +162,18 @@ export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 								<input
 									type="radio"
 									className="btn-check"
+									label={item.name}
 									name={item.name}
 									id={item.name}
 									autoComplete="off"
 									value={item.name}
-									checked={type === item.name}
-									onChange={handleInputType}
+									/* checked={type === item.name} */
 								/>
-								<label className="btn btn-outline-danger" htmlFor={item.id}>
+								<label
+									className="btn btn-outline-danger"
+									htmlFor={item.id}
+									onClick={handleLabelClick}
+								>
 									{item.name}
 								</label>
 							</li>
