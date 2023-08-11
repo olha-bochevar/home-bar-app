@@ -14,10 +14,9 @@ const OVERLAY_STYLE = {
 	background: 'white',
 	position: 'fixed',
 	zIndex: 999999,
-	/* 	top: 0,
-	left: 0, */
 	width: '100vw',
-	height: '90vh',
+	maxWidth: '600px',
+	maxHeight: 'fit-content',
 	top: '50%',
 	left: '50%',
 	right: 'auto',
