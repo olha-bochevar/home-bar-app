@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import './ModalWrapper.css';
 
 // Стилі для модального вікна
-Modal.defaultStyles = {};
+
 const modalStyles = {
 	content: {
 		top: '50%',
@@ -44,10 +44,14 @@ function ModalWrapper({ children }) {
 				onRequestClose={closeModal}
 				style={modalStyles}
 			>
-				<div className="d-flex justify-content-end">
-					<button onClick={closeModal} className="btn fs-4 p-0">
-						<i className="bi bi-x-lg"></i>
-					</button>
+				<div className="scroll-component">
+					<div className="scroll-content">
+						<div className="d-flex justify-content-end">
+							<button onClick={closeModal} className="btn fs-4 p-0">
+								<i className="bi bi-x-lg"></i>
+							</button>
+						</div>
+					</div>
 				</div>
 
 				{children}
