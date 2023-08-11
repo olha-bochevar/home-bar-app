@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
+import './ModalWrapper.css';
 
 // Стилі для модального вікна
 const modalStyles = {
