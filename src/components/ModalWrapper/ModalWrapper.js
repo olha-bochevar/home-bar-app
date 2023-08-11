@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
+
 import './ModalWrapper.css';
 
 // Стилі для модального вікна
+Modal.defaultStyles = {};
 const modalStyles = {
 	content: {
 		top: '50%',
