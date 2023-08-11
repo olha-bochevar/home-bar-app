@@ -1,6 +1,6 @@
 import './ModalWrapper.css';
 const MODAL_STYLES = {
-	background: 'white',
+	background: 'rgba(0, 0, 0, 0.3)',
 	outline: 'none',
 	width: '50rem',
 	maxWidth: 'calc(100vw - 2rem)',
@@ -11,14 +11,16 @@ const MODAL_STYLES = {
 	padding: '2rem',
 };
 const OVERLAY_STYLE = {
+	background: 'white',
 	position: 'fixed',
 	zIndex: 999999,
 	top: 0,
 	left: 0,
 	width: '100vw',
-	height: '100vh',
-	background: 'rgba(0, 0, 0, 0.3)',
+	height: '100%',
+	padding: '2rem',
 	display: 'flex',
+	flexDirection: 'column',
 	alignItems: 'center',
 	justifyContent: 'center',
 	overflow: 'hidden',

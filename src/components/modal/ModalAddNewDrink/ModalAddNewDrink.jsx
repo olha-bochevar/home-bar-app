@@ -87,7 +87,7 @@ export function ModalAddNewDrink({ isModalOpen, setIsModalOpen }) {
 
 	return (
 		<ModalWrapper open={isModalOpen}>
-			<div className="d-flex justify-content-end">
+			<div className="d-flex align-self-end">
 				<button onClick={() => setIsModalOpen(false)} className="btn fs-4 p-0">
 					<i className="bi bi-x-lg"></i>
 				</button>
