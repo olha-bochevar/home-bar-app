@@ -21,6 +21,7 @@ const OVERLAY_STYLE = {
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
+	overflow: 'auto',
 	boxSizing: 'border-box',
 };
 export const ModalWrapper = ({ open, children }) => {
